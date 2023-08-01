@@ -1,0 +1,10 @@
+const meuArray = [10,20,30,40,50];
+const segundoElemento = meuArray[1];
+const frutas = ['maçã','banana','laranja','uva','manga'];
+console.log(frutas.length, frutas);
+frutas.push('pera');
+console.log(frutas)
+frutas.shift();
+console.log(frutas);
+const numeros = [10,20,30,40,50];
+console.log(numeros.includes('25'));
