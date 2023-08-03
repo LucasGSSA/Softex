@@ -1,10 +1,46 @@
-const meuArray = [10,20,30,40,50];
-const segundoElemento = meuArray[1];
+// const meuArray = [10,20,30,40,50];
+// const segundoElemento = meuArray[1];
+// const frutas = ['maçã','banana','laranja','uva','manga'];
+// console.log(frutas.length, frutas);
+// frutas.push('pera');
+// console.log(frutas)
+// frutas.shift();
+// console.log(frutas);
+
+
+
+
+// const numeros = [10,20,30,40,50];
+// let numX = 25;
+
+// if(numeros.includes(numX)){
+//     console.log(numX, "está incluso")
+// } else {console.log(numX, "não está incluso")};
+
+
+
+const array1 = [1,2,3,4,5];
+const array2 = [1,2,3,4,5];
+const array3 = array1.concat(array2);
+
+const numeros = [1,2,3,4,5,6,7,8,9,10];
+
+const numerosPar = numeros.filter(numeros => numeros % 2 == 0);
+
+console.log(numerosPar)
+
+const numeros3 = [3,1,4,1,5,9,2,6,5,3,5];
+
+var numeros3Ordem = numeros3.sort();
+console.log(numeros3Ordem)
+
 const frutas = ['maçã','banana','laranja','uva','manga'];
-console.log(frutas.length, frutas);
-frutas.push('pera');
-console.log(frutas)
-frutas.shift();
-console.log(frutas);
-const numeros = [10,20,30,40,50];
-console.log(numeros.includes('25'));
+console.log(frutas.indexOf('laranja'));
+
+
+
+function saberArray(x){
+    return Array.isArray(x)
+}
+
+console.log(saberArray(frutas));
