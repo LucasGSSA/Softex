@@ -1,9 +1,13 @@
 const readline = require('readline-sync');
 
 
-
-
 let a = 1;
+
+do{
+    console.log(a);
+    a++;
+} while(a<11);
+
 while(a<11){
     console.log(a);
     a++;
