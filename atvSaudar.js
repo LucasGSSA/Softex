@@ -27,18 +27,18 @@ superSaudacao("lucas", 18, 16, "fev", 2005);
 //     console.log(`O dobro de ${numero} é ${dobroNumero}`);
 // };
 
-function mostrarNumeros(numeroInicio, numeroFim){
-    if(numeroInicio == undefined){
-        mostrarNumeros = readline.question("Digite o numero de Inicio da lista: ")
-    };
-    if(numeroFim == undefined){
-        numeroFim = readline.question("Digite o numero do final da lista: ")
-    }
-    while(numeroInicio <= numeroFim){
-        console.log(numeroInicio);
-        numeroInicio++;
-    };
-};
+// function mostrarNumeros(numeroInicio, numeroFim){
+//     if(numeroInicio == undefined){
+//         mostrarNumeros = readline.question("Digite o numero de Inicio da lista: ")
+//     };
+//     if(numeroFim == undefined){
+//         numeroFim = readline.question("Digite o numero do final da lista: ")
+//     }
+//     while(numeroInicio <= numeroFim){
+//         console.log(numeroInicio);
+//         numeroInicio++;
+//     };
+// };
 
 // function verificarPar(numero){
 //     if(numero == undefined){
@@ -65,6 +65,97 @@ function mostrarNumeros(numeroInicio, numeroFim){
 
 // saudacao();
 // dobro();
-mostrarNumeros(,5);
+// mostrarNumeros(,5);
 // verificarPar();
 // imprimirLista(frutas);
+
+function exibirSaudacao2(nome, saudacao='hello', pergunta='tudo bem?'){
+    console.log(`${saudacao}, ${nome}, ${pergunta}`)
+};
+
+
+
+
+
+
+function saudacao(nome='Pessoa'){
+    console.log(`Ola, ${nome}`);
+};
+
+
+function calculadora(num1, num2, operacao ="+"){
+    switch(operacao){
+        case '+':
+            console.log(num1 + num2);
+            break;
+        case '-': 
+            console.log(num1 - num2);
+            break 
+        case '*':
+            console.log(num1 * num2);
+            break;
+        case '/':
+            console.log(num1 / num2);
+            break
+        default:
+    };
+};
+
+
+function contagemRegressiva(numMaior='10'){
+    for(let i = numMaior; i > 0; i--){
+    console.log(i);
+    };
+};
+
+
+
+function apresentacao(nome="Pessoa", idade="18", profissao="trabalhador"){
+    console.log(`Olá, eu sou ${nome}, tenho ${idade} anos e sou ${profissao}.`);
+};
+
+function mensagemPersonalizada(texto, estilo='normal'){  
+    console.log(`"${texto}" está no estilo ${estilo}.`);
+
+};
+
+function criarMensagemDeSaudacao(nome){
+    const mensagem = `helo, ${nome}`;
+    return mensagem;
+}
+
+function somar(num1, num2){
+    const soma = num1 + num2;
+    return soma;
+}
+
+function ehPar(num){
+    const resposta = num%2 == 0;
+    return resposta;
+}
+
+function maiorNumero(num1, num2, num3){
+    const maior = Math.max(num1,num2,num3)
+    return maior;
+}
+
+function calcularIMC(peso, altura){
+    const IMC = peso / (altura*altura);
+    return IMC;
+}
+
+function respostaIMC(peso, altura){
+    calcularIMC(peso, altura);
+    if (calcularIMC()< 18){
+        const frase = `IMC baixo}`
+        return frase;
+    } else if (calcularIMC()> 24){
+        const frase = `IMC baixo}`;
+        return frase;
+    } else {
+        const frase = `IMC normal`;
+        return frase;
+    }
+}
+
+console.log(respostaIMC(70, 1.80));
