@@ -33,10 +33,11 @@ function somaRecursiva(numero){
 
 
 function fibonacci(numeroInicial){
-    if (numeroInicial == 1){
+    if (numeroInicial <= 1){
         return 1;
     } else{
-    numeroInicial = fibonacci(numeroInicial - 1) + fibonacci(numeroInicial - 2)
+        numeroInicial = fibonacci(numeroInicial - 1) + fibonacci(numeroInicial - 2);
+        return numeroInicial;
     };
 }
 
