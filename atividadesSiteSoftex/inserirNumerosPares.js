@@ -1,20 +1,22 @@
 const readline = require('readline-sync');
-let perguntaNumero = readline.questionInt("Digite um numero Par: ");
-
-// function refazerPergunta(variavel, texto){
-//     variavel = readline.question(`${texto}`);
-// };
 
 
 while (true){
-   if(perguntaNumero % 2 === 0){
-        break;
-    } else if(typeof(perguntaNumero) == 'number' && perguntaNumero % 2 != 0) {
-        console.log("voce digitou um numero impar, por favor digite um numero par.");
-        perguntaNumero = readline.question("Digite novamente: ");
-    } else{
+    try{
+        let perguntaNumero = readline.questionInt("Digite um numero Par: ");
+        if(isNaN(perguntaNumero) == false){
+            if(perguntaNumero % 2 == 0){
+            console.log("parabens, voce digitou um numero Par!");
+            break;
+            } else{
+                console.log("voce digitou um numero impar");
+            }
+        } else{
+            throw new error("O valor que voce digitou não é um numero!")
+        }
+    } catch(error){
+        console.log(error);
+        console.log("Valor invalido!");
     }
 };
-
-console.log(typeof(perguntaNumero));
 
