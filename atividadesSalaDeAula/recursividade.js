@@ -18,11 +18,6 @@ function fatorial(numero){
 
 
 
-
-
-
-
-
 function somaRecursiva(numero){
     if(numero == 0){
         return 0;
