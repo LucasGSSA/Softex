@@ -30,6 +30,6 @@ const readline = require("readline-sync");
 //     console.log("Finalizando conversão");
 // };
 
-const (PESSOA) = {
-    nome: 
-}
+// const (PESSOA) = {
+//     nome: 
+// }
