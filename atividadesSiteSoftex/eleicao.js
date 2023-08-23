@@ -59,6 +59,23 @@ while(votacao){
     }
 }
 
+let vencedor = '';
+let calculoVencedor = Math.max(candidato_X, candidato_Y, candidato_Z);
+console.log(calculoVencedor);
+
+
+if(calculoVencedor == candidato_X){
+    vencedor = "Candidato X"
+} else if(calculoVencedor == candidato_Y){
+    vencedor = "candidato Y"
+} else if(calculoVencedor == candidato_Z){
+    vencedor = "candidato Z"
+} else{
+    vencedor = "empate"
+}
+
+console.log(`O vencedor é ${vencedor}.`);
+
 console.log(`Votos para Candidato X = ${candidato_X}.`);
 console.log(`Votos para Candidato Y = ${candidato_Y}.`);
 console.log(`Votos para Candidato Z = ${candidato_Z}.`);
