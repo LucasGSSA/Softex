@@ -19,6 +19,9 @@ let candidato_X = 0;
 let candidato_Y = 0;
 let candidato_Z = 0;
 let brancosOuNulos = 0;
+/* Eu nao entendi se os valores eram para ser a quantidade de votos que aquele candidato tinha
+ou se era pra ser o numero para votar naquele candidato, como nao foi especificado, eu coloquei 
+a quantidade de votos para 0 e usei os valores como o numero para votação */
 
 let votacao = true;
 while(votacao){
