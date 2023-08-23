@@ -61,8 +61,6 @@ while(votacao){
 
 let vencedor = '';
 let calculoVencedor = Math.max(candidato_X, candidato_Y, candidato_Z);
-console.log(calculoVencedor);
-
 
 if(calculoVencedor == candidato_X){
     vencedor = "Candidato X"
