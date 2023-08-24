@@ -8,5 +8,7 @@ console.log(cor);
 
 cor.splice(2,1,'branco');
 idades.splice(1,1,20)
-console.log(cor);
+
+console.log(nomes);
 console.log(idades);
+console.log(cor);
