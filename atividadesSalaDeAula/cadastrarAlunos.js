@@ -28,6 +28,8 @@ while(loopSistema){
     console.log("1 - ADICIONAR ALUNO");
     console.log("2 - Listar alunos");
     console.log("3 - Editar alunos");
+    console.log("4 - Excluir aluno");
+    
 
     let escolha = readline.questionInt("Digite a opção: ")
     switch (escolha) {
@@ -69,8 +71,16 @@ while(loopSistema){
                     n[mudanca] = alteracao;
                 };
             };
-                
-            
+            break;
+
+        case 4:
+            console.log(alunos);
+            let apagarAluno = readline.questionInt("Digite o numero da matricula do aluno que voce deseja apagar: ")
+            for(let i of alunos){
+                if(i.matricula == apagarAluno){
+                    delete i;
+                }
+            }
             break;
         default:
             console.log("Opção invalida, digite uma opção valida.");
