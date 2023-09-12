@@ -16,6 +16,17 @@ let geradorMatricula = 2;
 
 let alunos = [aluno1, aluno2];
 
+function novoCadastro(nome, nota1, nota2, nota3){
+    this.matricula = geradorMatricula;
+    this.nome = nome;
+    this.notas = [nota1, nota2, nota3];
+    this.media = (this.nota1 + this.nota2 + this.nota3) /3
+}
+
+
+
+
+console.log(alunos);
 
 
 
@@ -44,11 +55,7 @@ while(loopSistema){
                 notas[i] = readline.questionInt(`Digite a nota ${i+1} do aluno: `);
             }
             geradorMatricula++
-            const novoAluno = {
-                matricula: geradorMatricula,
-                nome: nomeNovoAluno,
-                notas: notas,
-            }
+            const novoAluno = new novoCadastro(nomeNovoAluno, notas[0], notas[1], notas[2])
             alunos.push(novoAluno);
             break;
         case 2:
@@ -78,7 +85,7 @@ while(loopSistema){
             let apagarAluno = readline.questionInt("Digite o numero da matricula do aluno que voce deseja apagar: ")
             for(let i of alunos){
                 if(i.matricula == apagarAluno){
-                    delete i;
+                    alunos.splice(alunos.indexOf(i), 1);
                 }
             }
             break;
