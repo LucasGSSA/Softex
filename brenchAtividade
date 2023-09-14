@@ -1,0 +1,28 @@
+let limiteNome = true;
+    let limiteCpf = true;
+    let limiteIdade = true;
+    let limiteConsulta = true;
+    while(limiteNome){
+        const nome = readline.question("Digite o nome do paciente: ");
+        if(nome.length > 50) console.log("Limite de caracteres ultrapassado (MAX:50)")
+        else limiteNome = false;
+    }
+    while(limiteCpf){
+        const cpf = readline.questionInt("Digite o CPF do paciente (somente números): ");
+        if(cpf.length >11) console.log(`Limite de caracteres ultrapassado (MAX:11)`);
+        else limiteCpf = false;
+    }
+    while(limiteIdade){
+        const idade = readline.questionInt("Digite a idade do paciente: ");
+        if(idade.length > 2) console.log(`Limite de caracteres ultrapassado (MAX:3)`);
+        else limiteIdade = false;
+    }
+    while(limiteConsulta){
+        const consulta = readline.question("Digite o tipo da consulta: ");
+        if(consulta.length > 50)console.log(`Limite de caracteres ultrapassado (MAX:50)`);
+        else limiteConsulta = false;
+    }
+
+    const paciente = new Paciente(nome, cpf, idade, consulta);
+    this.pacientes.push(paciente);
+    console.log("Paciente cadastrado com sucesso!");
